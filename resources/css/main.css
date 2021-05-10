@@ -1,0 +1,1274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.active {
+  color: #d5615e !important;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #754643;
+}
+
+@font-face {
+  font-family: "Chau Philomene One";
+  src: url("../font/Chau_Philomene_One/ChauPhilomeneOne-Regular.woff2")
+      format("woff2"),
+    url("../font/Chau_Philomene_One/ChauPhilomeneOne-Regular.woff")
+      format("woff"),
+    url("../font/Chau_Philomene_One/ChauPhilomeneOne-Regular.ttf")
+      format("truetype");
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  min-width: 360px;
+}
+
+body,
+html {
+  position: relative;
+  height: 100%;
+  background-color: #f4eae4;
+  font-family: "Chau Philomene One", Verdana, Geneva, Tahoma, sans-serif;
+  color: #754643;
+}
+
+#site-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+
+#site-header .inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 1px;
+  text-align: center;
+  height: 24.8rem;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  width: 36.6rem;
+  padding: 3rem 0;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 10rem;
+}
+
+#offers-button {
+  left: 0.5rem;
+}
+
+#signup-button {
+  right: 0.5rem;
+}
+
+#menus-button,
+#explore-button {
+  display: none;
+  position: absolute;
+  top: 7.6rem;
+  height: 5rem;
+  width: 17rem;
+  font-weight: 400;
+  font-size: 2.5rem;
+  padding: 0.7rem;
+  background-color: #d5615e;
+  color: #f6f6f6;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform;
+}
+
+#signup-button,
+#offers-button {
+  display: block;
+  position: absolute;
+  top: 7.6rem;
+  height: 5rem;
+  width: 17rem;
+  font-weight: 400;
+  font-size: 2.5rem;
+  padding: 0.7rem;
+  background-color: #d5615e;
+  color: #f6f6f6;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform;
+}
+
+#signup-button:hover,
+#offers-button:hover {
+  transform: scale(1.078);
+}
+
+#primary-nav {
+  display: block;
+  font-weight: 400;
+}
+
+#primary-nav a {
+  display: inline-block;
+  position: relative;
+  letter-spacing: -0.1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 2.7rem;
+}
+
+#primary-nav .a-after::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -1px;
+  width: 7px;
+  height: 7px;
+  margin: -2px -3px 0 0;
+  border-radius: 50%;
+  background: #d5615e;
+}
+
+#primary-nav a:hover {
+  color: #d5615e;
+}
+
+#visible {
+  background-color: #f8cc78;
+}
+
+#hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+  z-index: 5;
+}
+
+#secondary-nav {
+  position: relative;
+  text-align: center;
+  display: block;
+  z-index: 0;
+  height: 6rem;
+  border-top: 0.25em solid #d5615e;
+  background: #754643;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#secondary-nav ul {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 0;
+}
+
+#secondary-nav li {
+  display: inline-block;
+  line-height: 1.7em;
+  font-size: 1.6rem;
+}
+
+#secondary-nav a {
+  display: block;
+  padding: 1.44rem 2.7rem;
+  color: #f6f6f6;
+  transition: 0.3s;
+}
+
+#secondary-nav a:hover {
+  background: #d5615e;
+  color: #f6f6f6;
+}
+
+#site-wrapper {
+  padding-top: 24.8rem;
+  min-height: 580px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#menu-header {
+  position: relative;
+  display: block;
+  z-index: 0;
+  margin: auto;
+}
+
+#menu-header-inner {
+  position: relative;
+  margin: auto;
+  max-width: 1310px;
+  z-index: 2;
+  padding: 22% 100px;
+}
+
+#full-width {
+  position: relative;
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+#order-button {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 2.05rem 6.5rem 2.05rem;
+  border-width: 3px;
+  border-style: solid;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  cursor: pointer;
+  border-color: #f8cc78;
+  background-color: #d5615e;
+  color: #f6f6f6;
+  border-radius: 1rem;
+  box-shadow: 0.7rem 0.8rem 0.2rem rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease-in-out;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+#order-button:hover {
+  transform: scale(0.95);
+}
+
+#menu-header-background {
+  background-image: url("../img/header_background.png");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+#cover {
+  display: none;
+}
+
+#menu-wrapper {
+  position: relative;
+  height: 221rem;
+  margin: 1rem auto;
+  margin-bottom: 4rem;
+  z-index: 3;
+  max-width: 1370px;
+}
+
+#menu-wrapper section {
+  display: block;
+  width: 50%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+#menu-wrapper .inner {
+  padding: 3rem 2.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.border {
+  background: #f6f6f6;
+  box-shadow: 0 0 0 0.4em#f8cc78 !important;
+  border-radius: 0.4em;
+}
+.menu-section-header {
+  display: block;
+  position: relative;
+  padding-bottom: 1.5rem;
+  padding-top: 2.5rem;
+  text-align: center;
+}
+
+.menu-section-header h1 {
+  margin: 0;
+  font-size: 4.5rem;
+  line-height: 1.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.menu-section-header h2 {
+  margin: 0;
+  font-size: 4.5rem;
+  line-height: 1.1em;
+  font-weight: 400;
+  padding: 0.5em 0em;
+}
+
+.menu-section-header h1:after {
+  content: "                     ";
+  display: block;
+  height: 1em;
+  text-align: center;
+  white-space: pre;
+  font-size: 6.3rem;
+  text-decoration-line: line-through;
+  text-decoration-style: wavy;
+  text-decoration-color: #d5615e;
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+
+.section-content {
+  position: relative;
+  padding: 0.75rem 0;
+  margin: -0.75rem -1.5rem -1.5rem;
+}
+
+.section-content.four-high {
+  height: 71rem;
+}
+
+.section-content.three-high {
+  height: 56rem;
+}
+
+.section-content.two-high {
+  height: 44rem;
+}
+
+.section-content.one-high {
+  height: 17.7rem;
+}
+
+.menu-item {
+  width: 100%;
+  float: left;
+  padding: 0.75rem 1.5rem;
+}
+
+.menu-item h2 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+.menu-item h2 span {
+  display: block;
+  font-size: 3.5rem;
+}
+
+.menu-item-content {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  padding-right: 14rem;
+}
+.menu-item-content p {
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #d5615e;
+}
+
+.menu-item-image {
+  display: block;
+  position: absolute;
+  top: 5rem;
+  right: 3.3rem;
+  z-index: 1;
+  width: 5.5rem;
+  cursor: pointer;
+}
+
+.no-content h2 {
+  text-align: center;
+}
+
+.item-image.no-content {
+  margin: -50% 0 0 -50%;
+  top: 0;
+  left: auto;
+}
+
+.menu-item.no-content {
+  width: 50%;
+  float: left;
+  padding: 15rem 0rem;
+  padding-top: 1rem;
+}
+
+.no-content > .inner {
+  padding: 1rem 0rem !important;
+}
+
+.menu-item-image.no-content {
+  left: 42%;
+  top: 9rem;
+}
+
+.after-double {
+  margin-top: -1.2rem;
+}
+
+.menu-item-image::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.item-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  margin: -100% 0 0 -100%;
+  border-radius: 50%;
+  border: 0.6rem solid #f8cc78;
+  box-shadow: 0.1rem 0.1rem 0.4rem 0.2rem rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  pointer-events: none;
+}
+
+#allergy-info .inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+#allergy-info p {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#allergy-info .border {
+  background: #f8cc78;
+  box-shadow: 0 0 0 0.4em #da7432 !important;
+}
+
+#sharers-image1 {
+  background-image: url("../img/seafood_paella.jpg");
+}
+#sharers-image2 {
+  background-image: url("../img/beef_tacos.jpg");
+}
+#sharers-image3 {
+  background-image: url("../img/variety_platter.jpg");
+}
+#sharers-image4 {
+  background-image: url("../img/hot_pork_tacos.jpg");
+}
+
+#tapas-image1 {
+  background-image: url("../img/albondigas_tomate.jpg");
+}
+#tapas-image2 {
+  background-image: url("../img/vieiras_pesto.jpg");
+}
+#tapas-image3 {
+  background-image: url("../img/pulpo_gallega.png");
+}
+#tapas-image4 {
+  background-image: url("../img/croquetas_jamon.png");
+}
+
+#seasonal-image1 {
+  background-image: url("../img/moroccan_salad.jpg");
+}
+#seasonal-image2 {
+  background-image: url("../img/veggie_canape.png");
+}
+#seasonal-image3 {
+  background-image: url("../img/boletus_risotto.png");
+}
+#seasonal-image4 {
+  background-image: url("../img/razor_shells.jpg");
+}
+
+#burger-image1 {
+  background-image: url("../img/chicken_burger.png");
+}
+#burger-image2 {
+  background-image: url("../img/double_beef_burger.jpeg");
+}
+#burger-image3 {
+  background-image: url("../img/angus_burger.png");
+}
+
+#side-image1 {
+  background-image: url("../img/hummous.png");
+}
+#side-image2 {
+  background-image: url("../img/sweet_fries.jpg");
+}
+#side-image3 {
+  background-image: url("../img/chicken_fingers.jpg");
+}
+#side-image4 {
+  background-image: url("../img/basmati.png");
+}
+
+#section-sharers {
+  position: absolute;
+  left: 0%;
+  top: -6rem;
+}
+
+#section-tapas {
+  position: absolute;
+  left: 50%;
+  top: -20rem;
+}
+
+#section-seasonal {
+  position: absolute;
+  left: 0%;
+  top: 88rem;
+}
+
+#section-burgers {
+  position: absolute;
+  left: 50%;
+  top: 74rem;
+}
+
+#section-sides {
+  position: absolute;
+  left: 50%;
+  top: 153rem;
+}
+
+#allergy-info {
+  position: absolute;
+  left: 0%;
+  top: 182rem;
+}
+
+footer {
+  display: block;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background: #f8cc78;
+  position: relative;
+  z-index: 1;
+}
+
+.inner-row {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 124rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.column-left {
+  position: relative;
+  float: left;
+  width: 23%;
+}
+
+.brand {
+  width: 13em;
+  text-align: center;
+}
+.brand img {
+  width: 100%;
+  height: auto;
+}
+
+.column-middle {
+  width: 38%;
+  position: relative;
+  float: left;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.column-middle h2 {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 3.8rem;
+  white-space: nowrap;
+}
+
+footer form {
+  position: relative;
+  max-width: 520px;
+  padding-bottom: 0;
+  text-align: left;
+  margin: 0;
+  font-size: 3.6rem;
+}
+
+footer fieldset {
+  display: inline-block;
+  position: relative;
+  border: solid 0.2rem #f8cc78;
+  width: 36rem;
+}
+
+footer input {
+  display: block;
+  width: 100%;
+  height: 4.6rem;
+  padding: 1.4rem 6rem 1.4rem 1.4rem;
+  border: none;
+  border-radius: 0.3rem;
+  color: #38293c;
+  font-size: 2.5rem;
+  font-family: "Chau Philomene One";
+}
+
+footer button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5.6rem;
+  height: 4.6rem;
+  font-weight: 700;
+  border: none;
+  color: #38293c;
+  background: #d5615e;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  font-size: 2.3rem;
+  font-family: "Chau Philomene One";
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+footer button:hover {
+  color: #f6f6f6;
+}
+
+.column-right {
+  position: relative;
+  width: 39%;
+  float: left;
+  padding-left: 1.5rem;
+}
+
+.site-map {
+  float: left;
+  text-align: left;
+  margin: 0;
+  margin-top: 5rem;
+  max-width: 48rem;
+}
+
+.site-map ul {
+  font-size: 1.7rem;
+}
+
+.site-map a:hover {
+  color: #f6f6f6;
+  text-decoration-line: underline;
+}
+.site-map li {
+  display: inline-block;
+  position: relative;
+  padding: 0 2rem 0 0;
+  white-space: nowrap;
+  line-height: 1.7em;
+}
+
+.site-map li::after {
+  content: "/";
+  position: relative;
+  display: inline-block;
+  right: -1.4rem;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************Media queries******************/
+
+@media only screen and (max-width: 1050px) {
+  #site-header .inner {
+    max-width: 752px;
+    height: 22.8rem;
+  }
+
+  #offers-button,
+  #signup-button {
+    width: 14rem;
+  }
+
+  #primary-nav a {
+    letter-spacing: -0.1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 2.5rem;
+  }
+  .logo {
+    width: 34rem;
+    padding-top: 3rem;
+    font-size: 9rem;
+  }
+
+  #site-wrapper {
+    padding-top: 22.8rem;
+  }
+
+  #order-button {
+    padding: 1.5rem 5rem 1.5rem;
+    font-size: 2rem;
+  }
+
+  #menu-wrapper section {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .menu-section-header h1 {
+    font-size: 4rem;
+  }
+  .menu-section-header h1:after {
+    content: "                 ";
+  }
+
+  #menu-wrapper .inner {
+    padding: 2rem 2.3rem;
+  }
+
+  .menu-item .title {
+    font-size: 3rem;
+  }
+
+  .item-image {
+    top: 0;
+    left: 75%;
+    width: 150%;
+    height: 150%;
+    margin: -25% 0 0 -100%;
+    border-radius: 50%;
+    border: 0.4rem solid #f8cc78;
+  }
+
+  #section-sharers {
+    position: absolute;
+    left: 0%;
+    top: -4rem;
+  }
+
+  #section-tapas {
+    position: absolute;
+    left: 50%;
+    top: -18rem;
+  }
+
+  #section-seasonal {
+    position: absolute;
+    left: 0%;
+    top: 90rem;
+  }
+
+  #section-burgers {
+    position: absolute;
+    left: 50%;
+    top: 76rem;
+  }
+
+  #section-sides {
+    position: absolute;
+    left: 50%;
+    top: 155rem;
+  }
+
+  #allergy-info {
+    position: absolute;
+    left: 0%;
+    top: 184rem;
+  }
+
+  .menu-section-header h2 {
+    font-size: 3.5rem;
+    line-height: 1.1em;
+  }
+
+  #allergy-info p {
+    font-size: 1.1em;
+  }
+
+  .brand {
+    margin: auto;
+  }
+
+  .column-right {
+    padding-left: 10.5rem;
+  }
+
+  .site-map {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 898px) {
+  #site-header .inner {
+    max-width: 700px;
+  }
+  .menu-item .title {
+    font-size: 2.5rem;
+  }
+
+  #offers-button,
+  #signup-button {
+    font-size: 2.2rem;
+    padding: 0.9rem;
+  }
+
+  .logo {
+    width: 32rem;
+    padding-top: 5rem;
+    font-size: 7rem;
+  }
+  .menu-item-content {
+    font-size: 1.8rem;
+    padding-right: 10rem;
+  }
+  .menu-section-header h1:after {
+    content: "               ";
+  }
+
+  .after-double {
+    margin-top: 0;
+  }
+
+  #allergy-info {
+    top: 190rem;
+  }
+
+  .section-content.one-high {
+    height: 14.2rem;
+  }
+
+  #section-seasonal .four-high {
+    height: 77rem;
+  }
+
+  #section-tapas {
+    position: absolute;
+    left: 50%;
+    top: -16rem;
+  }
+
+  #section-burgers {
+    position: absolute;
+    left: 50%;
+    top: 78rem;
+  }
+
+  #section-sides {
+    position: absolute;
+    left: 50%;
+    top: 157rem;
+  }
+
+  .brand {
+    width: 8em;
+  }
+
+  .site-map {
+    margin-top: 0.5rem;
+  }
+
+  .column-middle h2 {
+    font-size: 3.8rem;
+    padding-left: 2rem;
+  }
+
+  footer input {
+    font-size: 2.1rem;
+  }
+
+  footer fieldset {
+    width: 32rem;
+    padding-left: 2rem;
+  }
+
+  .site-map ul {
+    font-size: 1.5rem;
+  }
+
+  .site-map li {
+    line-height: 1.4em;
+  }
+}
+
+@media only screen and (max-width: 778px) {
+  #menu-wrapper .inner {
+    padding: 1rem 1rem;
+  }
+
+  #menu-wrapper {
+    height: 200rem;
+  }
+
+  .menu-item .title {
+    font-size: 2.2rem;
+  }
+
+  #section-sides .menu-section-header {
+    padding-bottom: 0;
+  }
+
+  .menu-item-content {
+    font-size: 1.7rem;
+  }
+
+  .section-content.one-high {
+    height: 18.9rem;
+  }
+
+  .section-content.two-high {
+    height: 40rem;
+  }
+
+  .section-content.four-high {
+    height: 64rem;
+  }
+
+  .section-content.three-high {
+    height: 51rem;
+  }
+
+  #section-seasonal .four-high {
+    height: 64rem;
+  }
+
+  #section-sharers {
+    position: absolute;
+    left: 0%;
+    top: -7rem;
+  }
+
+  #section-tapas {
+    position: absolute;
+    left: 50%;
+    top: -12rem;
+  }
+
+  #section-seasonal {
+    position: absolute;
+    left: 0%;
+    top: 76rem;
+  }
+
+  #section-burgers {
+    position: absolute;
+    left: 50%;
+    top: 71rem;
+  }
+
+  #section-sides {
+    position: absolute;
+    left: 50%;
+    top: 141rem;
+  }
+
+  #allergy-info {
+    position: absolute;
+    left: 0%;
+    top: 159.5rem;
+  }
+
+  #allergy-info .menu-section-header {
+    padding-top: 7rem;
+  }
+
+  .menu-item.no-content {
+    padding-bottom: 12rem;
+  }
+
+  .menu-item-image.no-content {
+    left: 35%;
+    top: 8rem;
+  }
+
+  .item-image.no-content {
+    margin: -46% 0 0 -25%;
+    top: 1rem;
+  }
+
+  footer {
+    padding: 5rem 2rem;
+  }
+  .column-left {
+    float: right;
+    width: 45%;
+  }
+  .brand {
+    width: 7em;
+    margin-bottom: 2rem;
+  }
+
+  .column-right {
+    width: 41%;
+    float: right;
+    padding-left: 1rem;
+  }
+
+  .column-middle {
+    width: 55%;
+    margin-top: 5rem;
+  }
+
+  .column-middle h2 {
+    margin-bottom: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 658px) {
+  #primary-nav {
+    display: none;
+  }
+
+  #site-header .inner {
+    height: 18.8rem;
+  }
+
+  .logo {
+    font-size: 5.3rem;
+    padding-top: 6.5rem;
+  }
+
+  #menus-button,
+  #explore-button {
+    width: 11rem;
+    font-size: 2.2rem;
+    padding: 0.9rem;
+  }
+
+  #menus-button {
+    left: 1rem;
+  }
+
+  #explore-button {
+    right: 1rem;
+  }
+
+  #menus-button,
+  #explore-button {
+    display: block;
+  }
+
+  #signup-button,
+  #offers-button {
+    display: none;
+  }
+
+  #site-wrapper {
+    padding-top: 18.8rem;
+  }
+
+  #menu-wrapper {
+    height: 400rem;
+  }
+
+  #menu-wrapper section {
+    width: 90%;
+  }
+
+  #section-tapas {
+    left: 5%;
+    top: 0;
+  }
+
+  #section-sharers {
+    left: 5%;
+    top: 83rem;
+  }
+
+  #section-seasonal {
+    left: 5%;
+    top: 165rem;
+  }
+
+  #section-burgers {
+    position: absolute;
+    left: 5%;
+    top: 248rem;
+  }
+
+  #section-sides {
+    position: absolute;
+    left: 5%;
+    top: 318rem;
+  }
+
+  #allergy-info {
+    position: absolute;
+    left: 5%;
+    top: 375rem;
+  }
+
+  #allergy-info .menu-section-header {
+    padding-top: 1rem;
+  }
+
+  .section-content.one-high {
+    height: 10rem;
+  }
+
+  .column-left {
+    display: none;
+  }
+
+  .column-middle {
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .column-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-map {
+    float: none;
+    text-align: unset;
+  }
+
+  .site-map {
+    margin-top: 1.5rem;
+    max-width: 100%;
+  }
+
+  .column-middle h2 {
+    padding: 0;
+  }
+
+  footer fieldset {
+    padding: 0;
+    margin-bottom: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 444px) {
+  #site-header .inner {
+    height: 12.8rem;
+  }
+  #site-wrapper {
+    padding-top: 12.8rem;
+  }
+  .logo {
+    margin: unset;
+    width: 13rem;
+    font-size: 3.3rem;
+    padding-top: 4rem;
+  }
+
+  #menu-header {
+    height: 30rem;
+  }
+
+  #menu-header-inner {
+    padding-top: 48%;
+    padding-right: 25%;
+    padding-left: 25%;
+  }
+
+  #cover {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 29rem;
+  }
+
+  #cover #decoration {
+    height: auto;
+    width: 100%;
+    margin-top: -6rem;
+  }
+
+  #cover #logo {
+    position: absolute;
+    top: 28%;
+    left: 33%;
+    width: 33%;
+  }
+
+  #order-button {
+    padding: 1.1rem 4.5rem 1.1rem;
+    font-size: 1.7rem;
+  }
+
+  #menus-button {
+    right: 11.5rem;
+    left: unset;
+  }
+
+  #explore-button {
+    right: 0.5rem;
+  }
+
+  #menus-button,
+  #explore-button {
+    width: 10rem;
+    height: 3.5rem;
+    top: 4.6rem;
+    padding: 0.4rem;
+    font-size: 1.9rem;
+  }
+
+  #full-width {
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+
+  #section-tapas > .border {
+    box-shadow: 0 0 0 0.4em #754643 !important;
+  }
+
+  .menu-section-header h1 {
+    font-size: 3.3rem;
+  }
+
+  footer fieldset {
+    width: 29rem;
+  }
+}
